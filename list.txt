@@ -1,0 +1,156 @@
+Plugin:
+    #info
+    name: "example plugin"
+    version: "1.0"
+    author: "Grayson"
+    Minecraft version: "1.21"
+
+loop(name):
+    # runs until break is called
+
+func [variables](name):
+    # runs like a function
+    return [value]  # return a value from the function
+
+if [variable] = [true/false/specific value]:
+    # if something happens
+
+elif [condition]:
+    # else if another condition
+
+else:
+    # if none of the above conditions are true
+
+# Minecraft Functions
+def on_player_join(player):
+    # code to run when a player joins
+    print(f"{player.name} has joined the game!")
+
+def on_player_leave(player):
+    # code to run when a player leaves
+    print(f"{player.name} has left the game!")
+
+def spawn_entity(entity_type, location):
+    # code to spawn an entity
+    print(f"Spawning {entity_type} at {location}.")
+
+def give_item(player, item, quantity):
+    # code to give an item to a player
+    print(f"Gave {quantity} {item} to {player.name}.")
+
+def send_message(player, message):
+    # code to send a message to a player
+    print(f"Message to {player.name}: {message}")
+
+# Data Structures
+list = [item1, item2, item3]  # list initialization
+dict = {key1: value1, key2: value2}  # dictionary initialization
+set = {item1, item2, item3}  # set initialization
+tuple = (item1, item2, item3)  # tuple initialization
+
+# Looping
+for item in list:
+    # iterate over each item in the list
+    print(item)  # print the current item
+
+while [condition]:
+    # continue looping while the condition is true
+    if [break_condition]:
+        break  # exit the loop
+
+# Exception Handling
+try:
+    # code that might throw an exception
+    risky_operation()
+except [ExceptionType] as e:
+    # handle the exception
+    print("An error occurred:", e)
+finally:
+    # code that runs regardless of exception
+    cleanup()
+
+# Importing Modules
+import [module_name]
+
+# Classes and Objects
+class [ClassName]:
+    def __init__(self, [parameters]):
+        # constructor code
+        self.attribute = [value]  # set an instance attribute
+
+    def [method_name](self, [parameters]):
+        # method code
+        return self.attribute  # return an instance attribute
+
+    @staticmethod
+    def static_method([parameters]):
+        # static method code
+        return "Static method called"
+
+# Inheritance
+class [ChildClass]([ParentClass]):
+    def __init__(self, [parameters]):
+        super().__init__([parameters])  # call the parent constructor
+
+    def [method_name](self):
+        # override a parent method
+        super().[method_name]()  # call the parent method
+
+# Comments
+# This is a single line comment
+
+"""
+This is a
+multi-line comment
+"""
+
+# Input and Output
+user_input = input("Enter a value: ")  # get user input
+print("You entered:", user_input)  # print user input
+
+# Lambda Functions
+lambda_function = lambda x: x * 2  # anonymous function
+
+# List Comprehensions
+squared_list = [x * x for x in range(10)]  # create a list of squares
+
+# Decorators
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+# File Handling
+with open('file.txt', 'r') as file:
+    content = file.read()  # read file content
+
+# Generators
+def my_generator():
+    yield 1
+    yield 2
+    yield 3
+
+for value in my_generator():
+    print(value)  # iterate over generator values
+
+# Regular Expressions
+import re
+pattern = r'\d+'  # regex pattern for digits
+matches = re.findall(pattern, "123 and 456")  # find all matches
+
+# Type Hinting
+def add_numbers(a: int, b: int) -> int:
+    return a + b  # function with type hints
+
+# Slicing
+my_list = [1, 2, 3, 4, 5]
+sub_list = my_list[1:4]  # get a slice of the list
+
+# Conditional Expressions
+result = "Even" if x % 2 == 0 else "Odd"  # inline if-else statement
